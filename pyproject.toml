@@ -1,0 +1,10 @@
+[project]
+name = "Curriculum-vitae-streamlit-application"
+version = "0.1.0"
+description = "Curriculum vitae streamlit application"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+"streamlit>=1.50.0",
+"uvicorn[standard]>=0.37.0",
+]
