@@ -1,4 +1,5 @@
 import streamlit as st
+from print_function import create_pdf, pdf_bytes
 
 # Configuration de la page
 st.set_page_config(page_title="My curriculum vitae", page_icon="📄", layout="wide")
@@ -71,4 +72,15 @@ st.write("[Voir le code sur GitHub](https://github.com)")
 # Projet 2
 st.write(
     "Création d'un bot Python connecté à une API météo pour envoyer des alertes quotidiennes automatisées."
+)
+
+with open("cv.pdf", "file_bytes") as f:
+    pdf_data = f.read()
+
+# Create the download button
+st.download_button(
+    label="Download CV as PDF",
+    data=pdf_data,
+    file_name="my_cv.pdf",
+    mime="application/pdf",
 )
