@@ -4,5 +4,5 @@
 
 ## Requirments 
 
-- Strealit
+- Streamlit
 - fpdf
